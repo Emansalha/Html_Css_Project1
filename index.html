@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/tailwindcss.css">
+    <title>belluri</title>
+    <style>
+       
+
+      
+
+        @keyframes straight {
+            from {
+                opacity: 0;
+                transform: scale(0.5, 0.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1, 1);
+                transform: translate(-19);
+            }
+        }
+
+        @keyframes round {
+            from {
+                opacity: 0;
+                transform: rotate(-120deg) scale(.7, .7);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1, 1);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="relative lg:bg-cover bg-left section1 bg-no-repeat md:h-[40vh] h-[80vh] lg:h-[100vh] " 
+    style="background-image: url(./image/backgroundsection1.jpg);">
+        <header class="relative">
+
+            <nav class="flex justify-around xl:w-5/6 lg:w-full mx-auto w-full  py-4 pt-0  xl:pt-10   space-x-2 lg:space-x-0 ">
+                <img src="./image/bellurisection1home.png" class="lg:scale-90 scale-75 inline lg:px-8 px-0 top-0 bottom-auto" alt="">
+               <div class=" md:px-0  ">
+    
+                     <div class=" relative  menu hidden lg:inline-flex ">
+                    <button class=" hidden lg:block text-slate-800  py-2 ">
+                    <a href="./index.html"><span class="px-6 font-normal font-Libera text-xl inline-block  hover:text-green-700">Home</span></a>  
+                    </button>
+                     </div>
+                       <div class="hidden  lg:inline-flex relative menu">
+                         <button class="flex text-slate-800  py-2 ">
+                        <a href="./spa.html"><span class="px-6 font-normal font-Libera text-xl inline-block  hover:text-green-700">Spa</span></a>  
+                         </button>
+                        </div>
+            
+                           <button class=" hidden  lg:inline-flex text-slate-800  py-2  ">
+                        <a href="./index.html"> <span class="px-6 font-normal font-Libera text-xl inline-block  hover:text-green-700">Packages</span></a>  
+                        </button>
+
+                   </div>
+            
+            
+               <div class=" relative menu  lg:inline-flex">
+                <button class="hidden lg:inline-flex text-slate-800 font-normal py-2   ">
+                <a href="./index.html"><span class="px-6 font-normal font-Libera text-xl     hover:text-green-700">Pages</span></a>  
+                  <svg onclick="openmenu('menu1')" class="fill-slate-800 w-3 py-2 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+                </button>
+                <ul id="menu1" class="dropdown w-full absolute  hidden">
+                    <li class="w-48 h-72">
+                        <a href="./index.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">About</a>
+                        <a href="./index.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Theraby</a>
+                        <a href="./pricing.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Pricing</a>
+                        <a href="./team.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Team</a>
+                        <a href="./blog.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Blog</a>
+                        <a href="./index.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Regestration</a>
+                        <a href="./contant.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Login</a>
+                    </li>
+                </ul>
+               </div>
+         
+            
+               <div class="  lg:inline-flex relative menu">
+                <button class="flex text-slate-800 font-normal py-2 ">
+                 <a href="./blog.html"> <span class="px-6 font-normal font-Libera text-xl hidden   lg:inline-flex hover:text-green-700">Blog</span></a>  
+                </button>
+               </div>
+            
+            
+               <div class="  lg:inline-flex relative menu">
+                <button class="flex text-slate-800 font-normal py-2 ">
+                <a href="./contant.html"><span class="px-6 font-normal  font-Libera text-xl hidden  lg:inline-flex hover:text-green-700">Contact</span></a>  
+                </button>
+               </div>
+            </div>
+               <div class=" text-center flex relative pt-2 pr-2">
+                <a href=""><img src="./image/signuser.svg" class=" scale-90 lg:pr-8 pr-0"></a>
+                <a href=""><img src="./image/shooping.svg" class=" scale-90 lg:pr-6 pr-0 "></a>
+               </div>
+               <div class="lg:hidden flex items-center mr-0">
+                <button id="navicon">
+                    <svg class=" w-10 h-10 text-gray-500 hover:text-black " x-show="!showMenu" fill="none" stroke-linecap="round"
+                       stroke-linejoin="round" stroke-width="2" viewBox="0 0 28 28" stroke="currentColor">
+                       <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+               </div>
+
+            </nav>
+
+
+            <div id="mopilemenu" class="hidden">
+                <ul class="  lg:hidden bg-gray-100 ">
+                    <li><a href="./index.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Home</a></li>
+                    <li><a href="./spa.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Spa</a></li>
+                    <li><a href="./index.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Packages</a></li>
+                    <li><a href="./index.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Pages</a></li>
+                    <li><a href="./blog.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Blog</a></li>
+                    <li><a href="./contant.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">contact</a></li>
+                   </ul>
+              </div>
+          
+        </header>  
+        
+        <script>
+            const btn=document.getElementById('navicon');
+            const menu=document.getElementById('mopilemenu');
+            btn.addEventListener('click',()=>{
+            menu.classList.toggle('hidden');
+            
+          } )
+        </script>
+    
+        <div class="mt-20 lg:px-8 xl:px-52 xl:py-10 text-left ml-8 md:ml-0  space-y-4 ">
+            <p class="font-Love lg:font-thin font-medium text-xl lg:text-3xl text-green-600 animation delay1 straight">Spa Treatment</p>
+            <div class="lg:mt-8 mt-4">
+                <p class="font-medium lg:font-thin font-Libera text-3xl lg:text-7xl text-[#434343] animation delay1 straight">Stress Relieving </p>
+                <p class="font-medium lg:font-thin font-Libera text-3xl lg:text-7xl text-[#434343] animation delay1 straight">Experience</p>
+            </div>
+            <div class="lg:flex lg:space-x-9 lg:items-center lg:text-center space-y-5 animation delay2 straight lg:pb-6 flex-none px-0">
+                <button class="bg-[#41844d] text-center text-white xl:text-white xl:text-center lg:w-36 xl:h-12 h-12 w-48 rounded-3xl hover:-translate-y-4 xl:hover:-translate-y-4">Book
+                    Now</button>
+                <div class="mx-auto justify-center items-center text-center ">
+                    <p class="justify-center items-center text-center text-[#579261] font-karla font-normal text-xl">
+                        Call
+                        now-<a href="tel"
+                            class="text-[#579261] font-karla font-semibold text-xl space-x-3 justify-around pl-6 relative capitalize duration-[.1s] p-0 before:content-[''] before:absolute before:left-[20%] before:h-[2px] before:w-0 before:bg-green-800 before:-bottom-1 hover:before:w-[80%]"
+                            id="a">0123 456 789</a></p>
+                </div>
+                <!-- <div><img src="./images/lightsection1.svg"
+                        class="pl-32 pt-24 scale-90 hover:translate-x-1 animation round delay3">
+                    </div> -->
+
+                    <div><img src="./image/lightsection1.svg"
+                        class="px-20 scale-90 hover:translate-x-1 animation round delay3">
+                    </div>
+            </div>
+        </div>
+         
+    </section>
+
+   
+
+
+
+<script>
+    function openmenu(dropdownid){
+        document.getElementById(dropdownid).classList.toggle("hidden")
+    }
+</script>
+
+
+
+    <section class="container mt-28">
+        <main class="md:flex relative w-full ">
+            <div class="xl:w-[50%] w-full  ">
+                <img src="./image/greensection2.svg" class="absolute md:top-32 md:left-60 top-0 hover:-translate-x-1">
+                <img src="./image/binkandgreensection2.svg"
+                    class="absolute md:top-96 right-auto md:left-56  lg:bottom-0  top-48 hover:-translate-x-1 pt-10">
+                <img src="./image/asalsection2.svg" class=" hidden md:block absolute md:top-96 md:left-8 hover:-translate-x-1 scale-90">
+                <img src="./image/section2oneeye.png" class=" xl:ml-48 lg:ml-28 w-full  scale-90">
+            </div>
+            <!-- <div class=" w-px h-[600px] top-0  my-auto bg-slate-700 mr-4 text-center" ></div> -->
+            <div class="xl:w-[40%] lg:w-[80%] w-full md:mt-20 mt-7 lg:ml-60 px-3 ">
+                <div>
+                    <div class="flex space-x-4 items-center">
+                        <p class="font-love xl:text-2xl text-xl font-medium text-green-700 text-center"> Welcome to Belluri</p>
+                        <img src="./image/olivesection2.svg" class="inline">
+                    </div>
+                </div>
+                <div>
+                    <p class="font-Libera xl:text-5xl lg:text-4xl  text-2xl font-medium float-none text-[#383838] pt-6">Natural & Relaxiable</p>
+                    <p class="text-lg font-karla text-[#6e6e6e] font-medium pt-6">We have more than <span
+                            class=" text-green-600"> 25 years </span>of Exprience and
+                        Provide best
+                    Spa service with <span
+                            class=" text-green-600"> 100% </span>clients Satisfaction.
+                    </p>
+                </div>
+                <main class="flex pt-6">
+                    <div class="  w-px h-20  top-0 left-auto  my-auto bg-green-700 mr-4"></div>
+                    <div class="w-full">
+                            <p class="text-[#999999] font-thin text-sm font-karla">
+                            Spa is most popular dolor
+                            amet,consectetur adipiscing elit. Sed et
+                            pellentesque risus nunc quis ut dolor,
+                            elit. Est amet ipsum velit are
+                            Sit convallis elit justo, eu. Gravida
+                            amet, magna tincidunt ut vitae
+                            ut lorem morbi lorem. Leo, neque, purus
+                            sed nunc semper</p>
+                    </div>
+                </main>
+                <div class="flex items-center pt-6 space-x-9">
+                    <button class="bg-[#41844d] text-white text-center w-36 h-12 rounded-3xl hover:-translate-y-4">Learn
+                        more</button>
+                    <img src="./image/manshafasection2.svg" class="hover:-translate-x-1 scale-90" alt="">
+                </div>
+            </div>
+        </main>
+     </section>
+
+
+
+
+    <section class="px-10 bg-white mt-28">
+        <main
+            class="grid grid-cols-1 md:grid md:grid-cols-3 gap-x-11 xl:gap-x-28 md:flex-nowrap text-center list-none justify-between items-center ">
+            <div class="pb-10 items-center text-center ">
+                <img class="inline scale-100  hover:scale-105 ease-in duration-300 hover:rotate-2"
+                    src="./image/asalandgreensection3.svg" alt="">
+                <li class="pt-6 font-Libera text-3xl font-medium text-slate-700 hover:text-green-800"><a href="">Organic
+                        Therapy</a></li>
+                <p class="pt-4 font-Libera text-slate-500 text-lg font-thin"> Organic most popular dolor amet,
+                conse pellentesque risus nunc quis ut
+                dolor Sit convallis elit justo, euagna</p>
+                <li class="pt-6 font-Libera text-lg font-thin text-slate-700 hover:text-green-600"><a
+                        href="">Details</a></li>
+            </div>
+            <div class="pb-10 items-center text-center ">
+                <img class="inline scale-100  hover:scale-105 ease-in duration-300 hover:rotate-2"
+                    src="./image/ricesection3.svg">
+                <li class="pt-6 font-Libera text-3xl font-medium text-slate-700 hover:text-green-800"><a href="">Massage
+                        Therapy</a></li>
+                <p class="pt-4 font-Libera text-slate-500 text-lg font-thin">Massage therapy popular amet, conse 
+                          pellentesque risus nunc quis ut dolor Sit convallis elit justo, euagna</p>
+                <li class="pt-6 font-Libera text-lg font-thin text-slate-700 hover:text-green-600"><a
+                        href="">Details</a></li>
+            </div>
+            <div class="pb-10 items-center text-center ">
+                <img class="inline scale-100  hover:scale-105 ease-in duration-300 hover:rotate-2"
+                    src="./image/shaffsection3.svg" alt="">
+                <li class="pt-8 font-Libera text-3xl font-medium text-slate-700 hover:text-green-800"><a href="">Oil
+                        Therapy</a></li>
+                <p class="pt-4 font-Libera text-slate-500 text-lg font-thin">Oil is most popular dolor amet, conse pellentesque risus nunc quis ut dolor Sit convallis elit justo, euagna</p>
+                <li class="pt-6 font-Libera text-lg font-thin text-slate-700 hover:text-green-600"><a
+                        href="">Details</a></li>
+            </div>
+        </main>
+    </section>
+
+
+    <section id="section4">
+        <main class="w-[100%] md:flex  relative ">
+            <div class="md:w-[50%] w-full  xl:ml-28 ml-10 absolute top-96 lg:relative lg:top-0  ">
+                <div class="flex space-x-4 items-center pt-10 md:pt-0">
+                    <p class=" font-love text-2xl font-medium text-green-700 text-center ">Why choose us</p><img
+                        src="./image/olivesection2.svg" class="inline">
+                </div>
+                <p class="font-Libera md:text-5xl text-2xl font-normal  text-[#434343] pt-2">We are different because...
+                </p>
+                <p class="text-lg font-karla text-[#858585] font-normal pt-6">Always provide<small
+                        class="text-lg font-normal font-karla text-green-600"> best quality </small>elements for <small
+                        class="text-lg font-normal font-karla text-green-600"> Spa & therapy, </small>which can
+                 differ us from other Spa Center with
+                    clients Satisfaction.</p>
+                <main class="grid md:grid-cols-2 grid-cols-1 pt-8 w-full  ">
+                    <div class="pt-8 lg:w-3/4">
+                        <p class="text-2xl font-medium font-Libera text-green-600"> Natural Herbs </p>
+                        <p class="text-[#858484] font-normal text-lg font-Libera pt-4">Oil therapy most populare
+                        nunc quis dolor convallis</p>
+                    </div>
+                    <div class="pt-8 lg:w-3/4">
+                        <p class="text-2xl font-medium font-Libera text-green-600"> 100% Safe </p>
+                        <p class="text-[#858484] font-normal text-lg font-Libera pt-4">Oil therapy most populare
+                        nunc quis dolor convallis</p>
+                    </div>
+                    <div class="pt-8 lg:w-3/4">
+                        <p class="text-2xl font-medium font-Libera text-green-600"> Experts Team </p>
+                        <p class="text-[#858484] font-normal text-lg font-Libera pt-4">Oil therapy most populare
+                      nunc quis dolor convallis</p>
+                    </div>
+                    <div class="pt-8 lg:w-3/4">
+                        <p class="text-2xl font-medium font-Libera text-green-600"> Special Offers </p>
+                        <p class="text-[#858484] font-normal text-lg font-Libera pt-4">Oil therapy most populare
+                      nunc quis dolor convallis</p>
+                    </div>
+                </main>
+
+            </div>
+            <div class=" lg:w-[50%] w-full lg:relative xl:mr-20 mr-0 scale-100 absolute top-0 ">
+                <img src="./image/ricesection4.svg" alt="" class="absolute scale-90 right-0 pl-28 hover:-translate-x-1">
+                <img src="./image/girlsection4.png" alt="" class="absolute left-0 top-0 scale-90">
+                <img src="./image/assalsection4.svg" alt=""
+                    class="absolute scale-90 xl:bottom-0 lg:bottom-16  left-0 w-1/4 lg:w-1/4  hover:-translate-x-1 ">
+                <img src="./image/treesection4.svg" alt="" class="absolute top-44  w-1/4 xl:w-1/2  md:w-1/2  -left-10 pr-44 scale-95">
+                <img src="./image/assayasection4.svg" alt=""
+                    class=" absolute lg:top-80 scale-90 right-12 pt-14 hover:-translate-x-1  w-1/4 md:w-1/3 top-72 ">
+            </div>
+        </main>
+    </section>
+
+
+    <section class="section5 bg-cover bg-no-repeat bg-center  h-full mt-32" style="background-image: url(./image/backgroundsection5.png);">
+        <main class="md:ml-80 py-16 ">
+            <main class="md:flex justify-center pt-2 flex-row ">
+                   <div>
+                    <div class="flex justify-center items-center text-center  ">
+                        <p class="font-Love font-medium text-xl text-green-600">Our Services</p>
+                        <img src="./image/olivesection2.svg" class="inline scale-75" alt="">
+                    </div>
+                    <p class="font-Libera font-medium lg:text-4xl  pl-10 text-slate-800 text-3xl ">Our Spa Service</p>
+                    </div>
+                          <div class="ml-10 w-px h-20  top-0 left-auto  my-auto bg-green-700 md:block hidden "></div>
+                     <div class="md:ml-12 ml-4 mt-6 md:w-[40%] ">
+                        <p class="text-[#999999] font-thin text-sm font-karla leading-6 ">Spa is most popular dolor amet, consectetur
+                        adipiscing elitet pellentesque risus nunc quis ut dolor, elit. Est amet ipsum velit Sit convallis elit justo, eu. Gravida amet, magna tincidunt.
+                        </p>
+                      </div>
+            </main>
+            <main class="md:flex md:justify-center  flex-row  ">
+                <div class="text-center  ">
+                    <img src="./image/hojamasection5.png" class="inline scale-75 " alt="">
+                    <li class="list-none"><a href="" class="text-2xl font-Libera text-slate-600 font-medium ">Hot Stone
+                            Spa</a></li>
+                    <p class="text-sm font-karla text-[#696969] font-medium pt-2">Start from <small
+                            class="text-sm font-medium font-karla text-green-600"> $75 </small>
+                </div>
+                <div class="text-center ">
+                    <img src="./image/masksection5.png" class="inline scale-75  " alt="">
+                    <li class="list-none"><a href="" class="text-2xl font-Libera text-slate-600 font-medium ">Face
+                            Scrup</a>
+                    </li>
+                    <p class="text-sm font-karla text-[#696969] font-medium pt-2">Start from <small
+                            class="text-sm font-karla  text-green-600"> $40 </small>
+                </div>
+                <div class="text-center">
+                    <img src="./image/blacksection5.png" class="inline scale-75 " alt="">
+                    <li class="list-none"><a href="" class="text-2xl font-Libera text-slate-600 font-medium ">Oil
+                            Massage</a></li>
+                    <p class="text-sm font-karla text-[#696969] font-medium pt-2">Start from <small
+                            class="text-sm font-medium font-karla text-green-600"> $35</small>
+                </div>
+            </main>
+        </main>
+    </section> 
+ 
+
+
+    <section class="w-[100%] p-[10%] lg:w-4/6 xl:w-7/12 flex-row mx-auto ">
+        <main class="bg-white justify-center items-center text-center md:p-[5%]  py-8 md:py-0">
+            <p class="text-green-600 font-Love font-thin text-2xl">Our Pricing</p>
+            <p class="text-slate-800 font-Libera md:text-4xl text-2xl font-medium pt-4">Spa & Therapy Pricing</p>
+            <p class="text-slate-500 font-medium md:text-lg pt-4 text-base ">Best pricing for <small
+                    class="text-green-600 font-medium text-lg">Spa & Therapy</small> which is very
+                reasonable and cost effective for all</p>
+        </main>
+    </section>
+
+
+
+
+
+
+    <section id="section5" class="relative md:grid md:grid-cols-2 md:gap-x-5 lg:grid lg:grid-cols-2 lg:gap-x-0 lg:my-0 my-8 flex-row grid grid-cols-1 gap-y-10 mx-4 ">
+        <div style="background-image: url(./image/خلفية\ بنفسجي\ وردة.png);" class=" lg:ml-[7%] md:py-20 lg:py-20 py-10 flex-row justify-center items-center lg:w-[90%] md:w-[100%] w-full  bg-no-repeat bg-center  mx-0 rounded-3xl  ">
+            <div class="mx-auto lg:w-[45%] pb-8 md:w-[50%] w-[50%] ">
+            <img src="./image/ورق زتون.svg" class="  w-[30%] mx-auto">
+            <h1 class=" md:text-4xl text-2xl font-love1 text-green-700 flex justify-center  ">Spa Pricing</h1>
+            </div>
+            <div class=" flex-row justify-between space-y-8 lg:px-10 xl:px-20 px-8 ">
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between">Hot Stone Sp    <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-0 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$75</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between">Face Scrub      <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$40</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between">Oil Massage     <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$35</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Manicure Pack  <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$95</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Body Massage   <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$60</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Geothermal Spa  <div class="border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$65</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Herbal Massage <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$80</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Face Massage   <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$125</h1>
+            </div>
+        </div>
+
+        <div style="background-image: url(./image/خلفية\ بنفسجي\ وردة.png);" class=" md:py-20 py-10 flex-row justify-center items-center lg:w-[90%] md:w-full bg-no-repeat bg-center  mx-0 rounded-3xl ">
+                <div class=" mx-auto xl:w-[45%] lg:w-[53%] w-[69%]  lg:pb-8 xl:pb-7 md:pb-6 pb-10 ">
+            <img src="./image/ورق زتون.svg" class=" mx-auto w-[30%]">
+            <h1 class="md:text-4xl text-xl font-love1 text-green-700 flex justify-center ">Therapy Pricing</h1>
+              </div>
+            <div class=" flex-row justify-between space-y-8 lg:px-10 xl:px-20 md:px-8 px-8 ">
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Organic Therapy<div class=" border-[#41844d]  border-t-[1px]  mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$90</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Massage Therapy<div class=" border-[#41844d]  border-t-[1px]  mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$90</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Oil Therapy   <div class="  border-[#41844d]  border-t-[1px]  mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$135</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Stone Therapy <div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$125</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Aroma Therapy <div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$120</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Herbal Therapy<div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$95</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Body Therapy  <div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$60</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Salt Therapy  <div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$100</h1>
+            </div>
+        </div>
+        <img src="./image/ورقة من شجرة.svg" class="absolute lg:bottom-8 bottom-4 -left-8  -z-10 lg:left-0  " style=" transform: translate3d(0px, 2.4993px, 0px) scale3d(1, 1, 1) rotateX(30deg) rotateY(3deg) rotateZ(5deg) skew(10deg, 0deg);
+        transform-style: preserve-3d;
+        will-change: transform;">
+       
+    </section>
+
+    <section id="section4">
+        <main class=" block justify-center pt-0 mt-80 md:pt-24 lg:pt-24 md:ml-28 lg:ml-16 md:block lg:flex md:mt-96 lg:mt-0">
+            <div class="relative lg:w-[90%] md:w-[90%] w-[100%]">
+                <img src="./image/section4.png" class="w-full absolute left-0  bottom-0 md:bottom-0 lg:bottom-28 xl:bottom-6">
+                <img src="./image/imagesmallinsection4.svg" class="absolute right-0 bottom-0 lg:bottom-24 md:bottom-0 xl:bottom-8">
+            </div>
+
+  
+            <main class=" md:ml-4 lg:ml-14 relative ml-4 mt-40 md:mt-0 lg:mt-0">
+                <div class="flex pt-14 md:pt-0 lg:pt-0">
+                    <h1 class="text-2xl font-karla text-green-800 pt-4 ">Testimonials</h1>
+                    <img src="./image/ورق زتون.svg">
+                </div>
+                <div class="md:w-[70%] lg:w-[70%] w-[100%] pr-2 md:pr-0 lg:pr-0">
+                    <h1 class="md:text-5xl lg:text-5xl text-3xl font-medium text-[#3d3d3d] font-love1 py-6 ">Client’s Expression</h1>
+                    <p class="text-[#636363]">Find here what our happy clients says about us with their satisfaction, which is our main goal
+                    </p>
+                    <div class="pt-10">
+                        <h2 class="text-xl text-[#636363] pb-6">I highly recommend Belluri!</h2>
+                        <p class="text-[#636363] leading-6">Spa is most popular dolor amet, consectetur adipiscing elit. Sed et pellentesque risus nunc
+                            quis uet dolor more Est amet ipsum velit are Sit convallis elit justo, same Gravida amet,
+                            magna tincidunt</p>
+            
+                        <nav class="flex justify-between pt-6 ">
+                            <h2 class="text-green-800 text-2xl ">Zenifer Luies</h2>
+                            <div>
+                                <button class="bg-green-700 rounded-full w-1/3"><img
+                                        src="./image/chevron_left_FILL0_wght500_GRAD0_opsz48.png">
+                                    </button>
+                                <button class="bg-green-700 rounded-full w-1/3"> <img
+                                        src="./image/chevron_right_FILL0_wght500_GRAD0_opsz48.png">
+                                    </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <img src="./image/قصب.svg" class="absolute lg:right-16 md:bottom-0 lg:bottom-0 bottom-12 md:right-0 right-0 w-1/4 md:w-[23%] lg:w-[23%]">
+            </main>
+            </main>
+    </section>
+
+    <section id="section3" class="md:block mt-12 md:ml-8 ml-5 lg:flex lg:ml-16 pb-14 lg:pb-0 ">
+        <main class="md:w-[60%] lg:w-[50%] xl:ml-8 ">
+            <div class="md:w-[80%] w-[90%] lg:w-[90%]">
+                <ul class="flex">
+                    <h3 class="pt-3 text-3xl pr-4 text-green-800 font-lovelight">Our Blog</h3>
+                    <img src="./image/ورق زتون.svg">
+                </ul>
+                <h1 class="text-5xl font-love1 py-6 text-[#393939] ">Latest Blog Post</h1>
+                <p class="pb-6 text-[#393939] ">Discuss about Spa & Therapy whicn make us more knowledgeable and
+                    informatic</p>
+            </div>
+
+            <div class=" ">
+                <div class="relative mt-8 lg:mt-2 md:w-full w-[95%] lg:w-[115%] xl:w-[100%] ">
+                    <img src="./image/image1.jpg" class="w-full ">
+                    <div class="absolute top-0 bottom-0 left-0 right-0  opacity-100 items-center md:mt-40 mt-28 lg:mt-28 xl:mt-48 text-white pl-4 lg:pl-8">
+                        <p class=" text-white pb-2 ">By <span class="hover:text-green-700">Stuart</span> / Aug 25, 2022
+                        </p>
+                        <a href="./section3.html" class="">
+                            <h1 class="text-white font-love1 text-3xl hover:text-green-700 lg:text-2xl xl:text-3xl">Spa Treamment is lorem<br>
+                                ipsum dollar natural </h1>
+                        </a>
+                    </div>
+                   
+                </div>
+                <img src="./image/ورق شجر عادي.svg" class="absolute left-0 bottom-1 lg:bottom-0 md:-z-10  hidden  lg:block xl:block xl:bottom-48 ">
+            </div>
+        </main>
+
+        <main class="md:ml-2 md:mt-16 mt-9 lg:ml-20 lg:mt-0 ">
+            <div style="background-image: url(./image/خلفية\ بنفسجي.png);" class="md:flex md:w-[90%] lg:w-[95%] md:rounded-2xl rounded-3xl w-[95%] md:py-2 py-0 lg:p-2 md:bg-no-repeat md:bg-center md:bg-cover bg-no-repeat bg-left bg-cover">
+                <img src="./image/image2.jpg" class="rounded-4xl w-[70%]  md:rounded-[20%] lg:rounded-[20%] md:w-[40%] lg:w-[52%]  p-8 pb-4  md:p-4 lg:p-4 ml-[13%] md:ml-0">
+                <ul class="md:pr-4 pl-5">
+                    <p class="text-green-700 md:mt-8 lg:mt-3"> <a href="./section3.html">By Ethan </a>/Aug 30, 2022</p>
+                    <a href="./section3.html"
+                        class=" hover:text-green-700 font-love text-3xl block py-3 text-[#393939] lg:text-2xl ">Mineral bath is very
+                        helpful for body</a>
+                    <p class="text-[#393939] pb-8 md:pb-0 ">Spa is most popular dolor amet consec elit. Sed pellentesque risus nunc
+                        quis</p>
+                </ul>
+            </div>
+            <div style="background-image: url(./image/خلفية\ بنفسجي.png);" class="md:flex md:w-[90%] lg:w-[95%] md:rounded-2xl mt-6 md:mt-6 lg:mt-10 rounded-3xl w-[95%] md:py-2 lg:p-2 py-0 md:bg-no-repeat md:bg-center md:bg-cover bg-no-repeat bg-left bg-cover">
+                <img src="./image/image3.jpg" class="rounded-4xl md:w-[40%] w-[70%] lg:w-[52%] md:rounded-[20%] lg:rounded-[20%] p-8 pb-4  md:p-4 lg:p-4 ml-[13%] md:ml-0">
+                <ul class="md:pr-4 pl-5">
+                    <p class="text-green-700 md:mt-8 lg:mt-3"><a href="./section3.html">By Morgan</a>/Dec 9, 2022</p>
+                    <a href="./section3.html"
+                        class=" hover:text-green-700 font-love text-3xl block py-3 text-[#393939] lg:text-2xl ">Herbal Therapy Tips
+                        & Benifits for all</a>
+                    <p class="text-[#393939] pb-8 md:pb-0 ">Spa is most popular dolor amet consec elit. Sed pellentesque risus nunc
+                        quis</p>
+                </ul>
+            </div>
+
+        </main>
+    </section>
+
+    <section id="section2">
+        <main class="flex  w-[80%]  md:justify-between md:space-x-10  m-auto py-20  space-x-16  ">
+        <div class="md:w-[15%] w-[40%]"><a href="#"><img src="./image/span.png"></a></div>
+        <div class="md:w-[10%] w-[40%] "><a href="#"><img src="./image/bota.png"></a></div>
+        <div class="md:w-[10%] w-[10%] hidden md:block"> <a href="#"><img src="./image/welliness.png"> </a></div>
+        <div class="md:w-[10%] w-[10%] hidden md:block"><a href="#"> <img src="./image/nature.png"></a></div>
+        <div class="md:w-[10%] w-[10%] hidden md:block"> <a href="#"><img src="./image/spa center.png"> </a></div>
+    </main>
+    </section>
+
+
+    <section id="section1" class=" lg:h-[14%vh] h-[10%vh] pb-6 w-full bg-left-top "
+        style=" background: url(./image/62f381ea03388ab830916936_footer-design-image-bg-top.svg) ,rgb(235, 233, 233) ; background-repeat: no-repeat;">
+
+        <main
+            class="  lg:grid lg:grid-cols-4 lg:gap-0  w-[60%] md:w-[90%] lg:w-[90%] md:mx-[5%] lg:pt-32  ml-9 pt-16  relative md:grid md:grid-cols-4 grid-cols-1 ">
+            <div class=" lg:w-full md:col-span-4  lg:col-span-1 w-full ">
+                <img src="./image/Belluri.png">
+                <p class=" lg:pt-8 pt-8">Organic most popular dolor arconse</p>
+                <p class=""> pellentesque risus nunc quis dolor</p>
+                <p class="lg:pt-8 pt-8 ">256, Central City, Borlex House</p>
+                <p class=" lg:pt-1 pt-1 "> Main town, New York, USA</p>
+                <a href="tel:+0123 456 789" class=" text-lime-600 block pt-8">+0123 456 789</a>
+                <p class="md:pt-6 font-libre  hover:text-lime-600"><a
+                        href="https://belluri.webflow.io/">www.belluri.com</a></p>
+            </div>
+
+            <div class=" lg:w-full w-full  ">
+                <h1 class="font-love1 lg:mt-3 text-3xl mt-4 ">Quick Link</h1>
+                <a href="#">
+                    <p class="lg:pt-8  pt-6  hover:text-lime-600">My Account</p>
+                </a>
+                <a href="#">
+                    <p class="text-black pt-5  hover:text-lime-600">Spa Service</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5  hover:text-lime-600">Our Therapy</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5  hover:text-lime-600">Register</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5  hover:text-lime-600">About us</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5  hover:text-lime-600">Our Experts</p>
+                </a>
+            </div>
+
+            <div class=" md:w-full md:mr-8 md:ml-24 lg:ml-0 ml-0">
+
+                <h1 class="text-3xl font-love1 md:mt-3 mt-4">Information</h1>
+                <a href="">
+                    <p class="md:pt-8 pt-6 hover:text-lime-600 ">Book Online</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5 hover:text-lime-600 ">Pricing Plan</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5  hover:text-lime-600">Packages</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5  hover:text-lime-600">Style Guide</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5  hover:text-lime-600">License</p>
+                </a>
+                <a href="#">
+                    <p class=" text-black pt-5  hover:text-lime-600">Changelog</p>
+                </a>
+            </div>
+            <div class=" md:w-full  md:ml-32 lg:ml-0 ml-0  ">
+                <h1 class="text-3xl font-love1 md:mt-3 mt-4">Opening Hour</h1>
+                <p class="pt-8  text-lime-600 ">Monday to Friday</p>
+                <p class=" hover:text-lime-600">9.00 am - 10.30 pm</p>
+                <p class=" text-lime-600 pt-4">Saturday to Sunday</p>
+                <p class=" hover:text-lime-600">11.00 am - 9.30 pm</p>
+                <h1 class="text-xl  py-6  hover:text-lime-600">Newsletter</h1>
+                <form class="grid grid-cols-2 w-[150%] md:w-full ">
+                    <input type="email" placeholder="Email here"
+                        class="border-[1px] border-lime-600 md:w-full z-10  w-full">
+                    <button class="bg-lime-700 w-1/4 h-8 md:w-1/3 "> <a href="./home.html"><img class="w-[60%] pl-2 "
+                                src="./image/arrow_right_alt_FILL0_wght400_GRAD0_opsz48.png"></button>
+
+                </form>
+
+                <p class="md:pt-8 pt-8 pb-16  hover:text-lime-600">Powered by Webflow</p>
+            </div>
+            <div class=" md:absolute md:bottom-0  md:right-0 md:mr-0 md:z-0 absolute  bottom-0 right-14 z-0 "> <img
+                    src="./image/62f381f42a9d95a2b3579ef0_footer-design-image-right.svg"></div>
+        </main>
+
+    </section>
+
+    <footer>
+        <main
+            class="md:flex md:justify-between md:space-x-6 lg:flex lg:justify-center  md:p-6  block  py-6  md:ml-2  pl-10 ml-0 space-x-0 ">
+            <div class="md:flex  md:justify-between md:space-x-2 lg:pr-96 flex  ">
+                <p>© 2022</p>
+                <a href="https://brandbes.com/">Brandbes.</a>
+                <p>All rights reserved</p>
+            </div>
+            <div class="md:flex  md:justify-between md:space-x-1 flex ">
+                <p class="pr-2">Follow us</p>
+                <div class="w-[40px] h-[3px] bg-black mt-3"></div>
+                <a href="https://ar-ar.facebook.com/"><img src="./image/facebook.svg.svg" class="p-2"></a>
+                <a href="https://twitter.com/login?lang=ar"><img src="./image/twitter Social-3.svg" class="p-2"></a>
+                <a href="https://www.instagram.com/"><img src="./image/instagram.svg.svg" class="p-2"></a>
+                <a href="https://www.bestore.co.il/"><img src="./image/Be-Icon.svg" class="p-2"></a>
+            </div>
+        </main>
+    </footer>
+    
+</body>
+
+</html>

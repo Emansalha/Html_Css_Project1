@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/tailwindcss.css">
+    <title>pricing</title>
+</head>
+<body>
+
+    
+    <section class="relative lg:bg-cover md:bg-contain section1 bg-no-repeat md:h-[40vh] h-[80vh] lg:h-[100vh] bg-right lg:bg-left  " 
+    style="background-image: url(./image/backgroundimagespa.png);">
+        <header class="relative">
+            <img src="./image/treesection1spa.svg" class="absolute md:top-0 top-32 ">
+
+            <nav class="flex justify-around xl:w-5/6 lg:w-full mx-auto w-full py-4 pt-10  xl:pt-16  space-x-2 lg:space-x-0 ">
+                <img src="./image/bellurisection1home.png" class="scale-90 inline  " alt="">
+               <div class=" md:px-2  ">
+    
+                     <div class=" relative  menu hidden lg:inline-flex ">
+                    <button class=" hidden lg:block text-slate-800  py-2 ">
+                       <a href="./index.html"> <span class="px-6 font-normal font-Libera text-xl inline-block  hover:text-green-700">Home</span></a>
+                    </button>
+                     </div>
+            
+            
+                       <div class="hidden  lg:inline-flex relative menu">
+                         <button class="flex text-slate-800 font-thin py-2">
+                        <a href="./spa.html"><span class="px-6 font-normal font-Libera text-xl inline-block  hover:text-green-700">Spa</span></a>
+                         </button>
+                        </div>
+            
+                           <button class=" hidden  lg:inline-flex text-slate-800  py-2 ">
+                        <a href="./index.html"> <span class="px-6 font-normal font-Libera text-xl inline-block  hover:text-green-700">Packages</span></a>
+                        </button>
+
+                   </div>
+            
+            
+               <div class=" relative menu  lg:inline-flex">
+                <button class="hidden lg:inline-flex text-slate-800  py-2 ">
+                <a href="./index.html"> <span class="px-6 font-normal font-Libera text-xl     hover:text-green-700">Pages</span></a>
+                  <svg onclick="openmenu('menu1')" class="fill-slate-800 w-3 py-2 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+                </button>
+                <ul id="menu1" class="dropdown w-full absolute hidden ">
+                    <li class="w-48 h-72">
+                        <a href="./index.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">About</a>
+                        <a href="./index.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Theraby</a>
+                        <a href="./pricing.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Pricing</a>
+                        <a href="./team.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Team</a>
+                        <a href="./blog.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Blog</a>
+                        <a href="./index.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Regestration</a>
+                        <a href="./contant.html" class="font-Libera rounded-none bg-slate-100 block hover:text-green-700 py-2  text-xl text-slate-600">Login</a>
+                    </li>
+                </ul>
+               </div>
+         
+            
+               <div class="  lg:inline-flex relative menu">
+                <button class="flex text-slate-800  py-2 ">
+                <a href="./blog.html">  <span class="px-6 font-normal font-Libera text-xl hidden   lg:inline-flex hover:text-green-700">Blog</span></a>
+                </button>
+               </div>
+            
+            
+               <div class="  lg:inline-flex relative menu">
+                <button class="flex text-slate-800  py-2 ">
+                <a href="./contant.html"> <span class="px-6 font-normal font-Libera text-xl hidden  lg:inline-flex hover:text-green-700">Contact</span></a>
+                </button>
+               </div>
+            </div>
+               <div class=" text-center flex relative pt-2 pr-2">
+                <a href=""><img src="./image/signuser.svg" class=" scale-90 lg:pr-8 pr-0"></a>
+                <a href=""><img src="./image/shooping.svg" class=" scale-90 lg:pr-6 pr-0 "></a>
+               </div>
+               <div class="lg:hidden flex items-center mr-0">
+                <button id="navicon">
+                    <svg class=" w-10 h-10 text-gray-500 hover:text-black " x-show="!showMenu" fill="none" stroke-linecap="round"
+                       stroke-linejoin="round" stroke-width="2" viewBox="0 0 28 28" stroke="currentColor">
+                       <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+               </div>
+
+            </nav>
+
+
+            <div id="mopilemenu" class="hidden">
+                <ul class="  lg:hidden bg-gray-100 ">
+                    <li><a href="./index.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Home</a></li>
+                    <li><a href="./spa.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Spa</a></li>
+                    <li><a href="./index.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Packages</a></li>
+                    <li><a href="./index.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Pages</a></li>
+                    <li><a href="./blog.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">Blog</a></li>
+                    <li><a href="./contant.html" class="block p-4 text-xl font-medium text-[#393939] font-love1 ">contact</a></li>
+                   </ul>
+              </div>
+          
+        </header>
+       
+    
+        <div class=" text-center items-center pt-20 flex-row justify-center z-10   ">
+        <p class="font-Love font-thin text-3xl text-green-600 animation delay1 straight mx-auto">Our Pricing</p>
+        <p class="font-Libera font-medium lg:text-6xl text-3xl mx-auto text-[#393939] pt-6 ">Spa & Therapy Pricing</p>
+      
+        <li class="space-x-3 list-none text-slate-500 pt-4 font-karla font-thin text-sm "><a href="./index.html"><span class="hover:text-green-700"> Home </span></a> > Pricing</li>
+         </div>
+         
+    </section>
+
+    <script>
+        const btn=document.getElementById('navicon');
+        const menu=document.getElementById('mopilemenu');
+        btn.addEventListener('click',()=>{
+        menu.classList.toggle('hidden');
+        
+      } )
+    </script>
+
+
+
+
+
+
+
+
+    <section id="section5" class="relative md:grid md:grid-cols-2 md:gap-x-5 lg:grid lg:grid-cols-2 lg:gap-x-0 lg:my-0 my-8 flex-row grid grid-cols-1 gap-y-10 mx-4 ">
+        <div style="background-image: url(./image/خلفية\ بيج\ موردة.png) , url(./image/خلفية\ بنفسجي\ وردة.png);" class=" lg:ml-[7%] md:py-20 lg:py-20 py-10 flex-row justify-center items-center lg:w-[90%] md:w-[100%] w-full  bg-no-repeat bg-center  mx-0 rounded-3xl  ">
+            <div class="mx-auto lg:w-[45%] pb-8 md:w-[50%] w-[50%] ">
+            <img src="./image/ورق زتون.svg" class=" ml-16 w-[30%]">
+            <h1 class=" text-4xl font-love1 text-green-700 ">Spa Pricing</h1>
+            </div>
+            <div class=" flex-row justify-between space-y-8 lg:px-10 xl:px-20 px-8 ">
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between">Hot Stone Sp    <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-0 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$75</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between">Face Scrub      <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$40</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between">Oil Massage     <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$35</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Manicure Pack  <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$95</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Body Massage   <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$60</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Geothermal Spa  <div class="border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$65</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Herbal Massage <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$80</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Face Massage   <div class=" border-[#41844d]  border-t-[1px] mt-4 md:mx-3 w-[30%] border-dashed lg:w-[45%] h-[1px] "></div>$125</h1>
+            </div>
+        </div>
+
+        <div style="background-image:  url(./image/خلفية\ بيج\ موردة.png) , url(./image/خلفية\ بنفسجي\ وردة.png);" class=" md:py-20 py-10 flex-row justify-center items-center lg:w-[90%] md:w-full bg-no-repeat bg-center  mx-0 rounded-3xl ">
+                <div class=" mx-auto xl:w-[45%] lg:w-[53%] w-[69%]  lg:pb-8 xl:pb-7 md:pb-6 pb-10 ">
+            <img src="./image/ورق زتون.svg" class=" ml-16 w-[30%]">
+            <h1 class="text-4xl font-love1 text-green-700  ">Therapy Pricing</h1>
+              </div>
+            <div class=" flex-row justify-between space-y-8 lg:px-10 xl:px-20 md:px-8 px-8 ">
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Organic Therapy<div class=" border-[#41844d]  border-t-[1px]  mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$90</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Massage Therapy<div class=" border-[#41844d]  border-t-[1px]  mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$90</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Oil Therapy   <div class="  border-[#41844d]  border-t-[1px]  mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$135</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Stone Therapy <div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$125</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Aroma Therapy <div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$120</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Herbal Therapy<div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$95</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Body Therapy  <div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$60</h1>
+                <h1 class=" flex text-[#4f4f50] text-lg font-normal justify-between ">Salt Therapy  <div class=" border-[#41844d]  border-t-[1px]   mt-4  w-[30%] md:w-[30%]  border-dashed lg:w-[45%] h-[1px] "></div>$100</h1>
+            </div>
+        </div>
+        <img src="./image/ورقة من شجرة.svg" class="absolute lg:bottom-8 bottom-4 -left-8  -z-10 lg:left-0  " style=" transform: translate3d(0px, 2.4993px, 0px) scale3d(1, 1, 1) rotateX(30deg) rotateY(3deg) rotateZ(5deg) skew(10deg, 0deg);
+        transform-style: preserve-3d;
+        will-change: transform;">
+       
+    </section>
+
+
+    <section id="section2">
+        <main class="flex  w-[80%]  md:justify-between md:space-x-10  m-auto py-20  space-x-16  ">
+        <div class="md:w-[15%] w-[40%]"><a href="#"><img src="./image/span.png"></a></div>
+        <div class="md:w-[10%] w-[40%] "><a href="#"><img src="./image/bota.png"></a></div>
+        <div class="md:w-[10%] w-[10%] hidden md:block"> <a href="#"><img src="./image/welliness.png"> </a></div>
+        <div class="md:w-[10%] w-[10%] hidden md:block"><a href="#"> <img src="./image/nature.png"></a></div>
+        <div class="md:w-[10%] w-[10%] hidden md:block"> <a href="#"><img src="./image/spa center.png"> </a></div>
+    </main>
+    </section>
+
+
+
+    <section id="section1" class=" lg:h-[14%vh] h-[10%vh] pb-6 w-full bg-left-top "
+    style=" background: url(./image/62f381ea03388ab830916936_footer-design-image-bg-top.svg) ,rgb(235, 233, 233) ; background-repeat: no-repeat;">
+
+    <main
+        class="  lg:grid lg:grid-cols-4 lg:gap-0  w-[60%] md:w-[90%] lg:w-[90%] md:mx-[5%] lg:pt-32  ml-9 pt-16  relative md:grid md:grid-cols-4 grid-cols-1 ">
+        <div class=" lg:w-full md:col-span-4  lg:col-span-1 w-full ">
+            <img src="./image/Belluri.png">
+            <p class=" lg:pt-8 pt-8">Organic most popular dolor arconse</p>
+            <p class=""> pellentesque risus nunc quis dolor</p>
+            <p class="lg:pt-8 pt-8 ">256, Central City, Borlex House</p>
+            <p class=" lg:pt-1 pt-1 "> Main town, New York, USA</p>
+            <a href="tel:+0123 456 789" class=" text-lime-600 block pt-8">+0123 456 789</a>
+            <p class="md:pt-6 font-libre  hover:text-lime-600"><a
+                    href="https://belluri.webflow.io/">www.belluri.com</a></p>
+        </div>
+
+        <div class=" lg:w-full w-full  ">
+            <h1 class="font-love1 lg:mt-3 text-3xl mt-4 ">Quick Link</h1>
+            <a href="#">
+                <p class="lg:pt-8  pt-6  hover:text-lime-600">My Account</p>
+            </a>
+            <a href="#">
+                <p class="text-black pt-5  hover:text-lime-600">Spa Service</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5  hover:text-lime-600">Our Therapy</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5  hover:text-lime-600">Register</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5  hover:text-lime-600">About us</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5  hover:text-lime-600">Our Experts</p>
+            </a>
+        </div>
+
+        <div class=" md:w-full md:mr-8 md:ml-24 lg:ml-0 ml-0">
+
+            <h1 class="text-3xl font-love1 md:mt-3 mt-4">Information</h1>
+            <a href="">
+                <p class="md:pt-8 pt-6 hover:text-lime-600 ">Book Online</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5 hover:text-lime-600 ">Pricing Plan</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5  hover:text-lime-600">Packages</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5  hover:text-lime-600">Style Guide</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5  hover:text-lime-600">License</p>
+            </a>
+            <a href="#">
+                <p class=" text-black pt-5  hover:text-lime-600">Changelog</p>
+            </a>
+        </div>
+        <div class=" md:w-full  md:ml-32 lg:ml-0 ml-0  ">
+            <h1 class="text-3xl font-love1 md:mt-3 mt-4">Opening Hour</h1>
+            <p class="pt-8  text-lime-600 ">Monday to Friday</p>
+            <p class=" hover:text-lime-600">9.00 am - 10.30 pm</p>
+            <p class=" text-lime-600 pt-4">Saturday to Sunday</p>
+            <p class=" hover:text-lime-600">11.00 am - 9.30 pm</p>
+            <h1 class="text-xl  py-6  hover:text-lime-600">Newsletter</h1>
+            <form class="grid grid-cols-2 w-[150%] md:w-full ">
+                <input type="email" placeholder="Email here"
+                    class="border-[1px] border-lime-600 md:w-full z-10  w-full">
+                <button class="bg-lime-700 w-1/4 h-8 md:w-1/3 "> <a href="./home.html"><img class="w-[60%] pl-2 "
+                            src="./image/arrow_right_alt_FILL0_wght400_GRAD0_opsz48.png"></button>
+
+            </form>
+
+            <p class="md:pt-8 pt-8 pb-16  hover:text-lime-600">Powered by Webflow</p>
+        </div>
+        <div class=" md:absolute md:bottom-0  md:right-0 md:mr-0 md:z-0 absolute  bottom-0 right-14 z-0 "> <img
+                src="./image/62f381f42a9d95a2b3579ef0_footer-design-image-right.svg"></div>
+    </main>
+
+</section>
+
+<footer>
+    <main
+        class="md:flex md:justify-between md:space-x-6 lg:flex lg:justify-center  md:p-6  block  py-6  md:ml-2  pl-10 ml-0 space-x-0 ">
+        <div class="md:flex  md:justify-between md:space-x-2 lg:pr-96 flex  ">
+            <p>© 2022</p>
+            <a href="https://brandbes.com/">Brandbes.</a>
+            <p>All rights reserved</p>
+        </div>
+        <div class="md:flex  md:justify-between md:space-x-1 flex ">
+            <p class="pr-2">Follow us</p>
+            <div class="w-[40px] h-[3px] bg-black mt-3"></div>
+            <a href="https://ar-ar.facebook.com/"><img src="./image/facebook.svg.svg" class="p-2"></a>
+            <a href="https://twitter.com/login?lang=ar"><img src="./image/twitter Social-3.svg" class="p-2"></a>
+            <a href="https://www.instagram.com/"><img src="./image/instagram.svg.svg" class="p-2"></a>
+            <a href="https://www.bestore.co.il/"><img src="./image/Be-Icon.svg" class="p-2"></a>
+        </div>
+    </main>
+</footer>
+
+
+
+
+</body>
+</html>
